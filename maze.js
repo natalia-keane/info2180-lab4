@@ -2,15 +2,15 @@
 
 var loser = false;
 
-var sessionStart = false;
+var seshStart = false;
 
 window.onload = function(){
 
-    var bound = document.querySelectorAll(".boundary");
+    var boundary = document.querySelectorAll(".boundary");
 
-    for (var i = 0; i < bound.length-1; i++) {
+    for (var i = 0; i < boundary.length-1; i++) {
 
-        bound[i].addEventListener("mouseover", gameOver);
+        boundary[i].addEventListener("mouseover", gameOver);
 
     }
 
@@ -18,13 +18,14 @@ window.onload = function(){
 
     document.getElementById("start").addEventListener("click",beginGame);
 
+
 }
 
 
 
 function gameOver(){
 
-    if(sessionStart){
+    if(seshStart){
 
         setBoundaryCSS("boundary youlose");
 
@@ -38,7 +39,7 @@ function gameOver(){
 
 function goal(){
 
-    if(sessionStart){
+    if(seshStart){
 
         if(!loser){
 
@@ -52,7 +53,7 @@ function goal(){
 
         }
 
-        sessionStart = false;
+        seshStart = false;
 
     }
 
@@ -64,7 +65,7 @@ function beginGame(){
 
     setBoundaryCSS("boundary");
 
-    sessionStart = true;
+    seshStart = true;
 
     loser = false;
 
@@ -76,11 +77,11 @@ function beginGame(){
 
 function setBoundaryCSS(cssName){
 
-    var bound = document.querySelectorAll(".boundary");
+    var boundary = document.querySelectorAll(".boundary");
 
-    for (var i = 0; i < bound.length-1; i++) {
+    for (var i = 0; i < boundary.length-1; i++) {
 
-        bound[i].className = cssName;
+        boundary[i].className = cssName;
 
     }
 
