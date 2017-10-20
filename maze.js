@@ -10,13 +10,9 @@ var blinky = document.querySelectorAll(".boundary");
 for(var count=0; count<blinky.length-1; count++){
 blinky[count].addEventListener("mouseover", gameOver);
 }
-blinky.addEventListener("mouseover", function(){
-  blinky.classList.add("youlose");
-})
-}
-    document.getElementById("end").addEventListener("mouseover",goal);
+document.getElementById("end").addEventListener("mouseover",goal);
 
-    document.getElementById("start").addEventListener("click",beginGame);
+document.getElementById("start").addEventListener("click",beginGame);
 
 }
 
