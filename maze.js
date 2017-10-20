@@ -14,10 +14,10 @@ window.onload = function(){
 
     }
 
-    document.getElementById("end").addEventListener("mouseover",goal);
+    document.getElementById("end").addEventListener("mouseover",update);
 
     document.getElementById("start").addEventListener("click",beginGame);
-
+    document.getElementById("start").addEventListener("onmouseout", beginGame);
 
 }
 
@@ -37,7 +37,7 @@ function gameOver(){
 
 
 
-function goal(){
+function update(){
 
     if(seshStart){
 
