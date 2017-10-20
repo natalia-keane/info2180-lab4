@@ -6,11 +6,11 @@ var seshStart = false;
 
 window.onload = function(){
 
-    var boundary = document.querySelectorAll(".boundary");
+    var bound = document.querySelectorAll(".boundary");
 
-    for (var i = 0; i < boundary.length-1; i++) {
+    for (var i = 0; i <bound.length-1; i++) {
 
-        boundary[i].addEventListener("mouseover", gameOver);
+        bound[i].addEventListener("mouseover", gameOver);
 
     }
 
@@ -77,11 +77,11 @@ function beginGame(){
 
 function setBoundaryCSS(cssName){
 
-    var boundary = document.querySelectorAll(".boundary");
+    var bound = document.querySelectorAll(".boundary");
 
-    for (var i = 0; i < boundary.length-1; i++) {
+    for (var i = 0; i < bound.length-1; i++) {
 
-        boundary[i].className = cssName;
+        bound[i].className = cssName;
 
     }
 
