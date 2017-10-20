@@ -17,7 +17,7 @@ window.onload = function(){
     document.getElementById("end").addEventListener("mouseover",update);
 
     document.getElementById("start").addEventListener("click",beginGame);
-    document.getElementById("start").addEventListener("onmouseout", beginGame);
+    document.getElementById("end").addEventListener("onmouseout", update);
 
 }
 
