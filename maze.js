@@ -5,7 +5,7 @@ var loser = false;
 
 var seshStart = false;
 
-var blinky = document.querySelectorAll("#boundary");
+var blinky = document.querySelectorAll(".boundary");
 
 for(var count=0; count<blinky.length-1; count++){
 blinky[count].addEventListener("mouseover");
@@ -72,7 +72,7 @@ function beginGame(){
 
 function setBoundaryCSS(cssName){
 
-    var blinky = document.querySelectorAll("#boundary");
+    var blinky = document.querySelectorAll(".boundary");
 
     for (var i = 0; i < blinky.length-1; i++) {
 
