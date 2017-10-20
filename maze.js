@@ -10,7 +10,7 @@ window.onload = function(){
 
     for (var i = 0; i <bound.length-1; i++) {
 
-        bound[i].addEventListener("mouseover", gameOver);
+        bound[i].addEventListener("mouseover", gameSet);
 
     }
 
@@ -23,7 +23,7 @@ window.onload = function(){
 
 
 
-function gameOver(){
+function gameSet(){
 
     if(seshStart){
 
