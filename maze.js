@@ -1,18 +1,22 @@
-"use strict";
-window.onload=function(){
+"use strict"
 
 var loser = false;
 
-var seshStart = false;
+var sessionStart = false;
 
-var blinky = document.querySelectorAll(".boundary");
+window.onload = function(){
 
-for(var count=0; count<blinky.length-1; count++){
-blinky[count].addEventListener("mouseover");
-}
-document.getElementById("end").addEventListener("mouseover",goal);
+    var bound = document.querySelectorAll(".boundary");
 
-document.getElementById("start").addEventListener("click",beginGame);
+    for (var i = 0; i < bound.length-1; i++) {
+
+        bound[i].addEventListener("mouseover", gameOver);
+
+    }
+
+    document.getElementById("end").addEventListener("mouseover",goal);
+
+    document.getElementById("start").addEventListener("click",beginGame);
 
 }
 
@@ -20,7 +24,7 @@ document.getElementById("start").addEventListener("click",beginGame);
 
 function gameOver(){
 
-    if(seshStart){
+    if(sessionStart){
 
         setBoundaryCSS("boundary youlose");
 
@@ -34,7 +38,7 @@ function gameOver(){
 
 function goal(){
 
-    if(seshStart){
+    if(sessionStart){
 
         if(!loser){
 
@@ -48,7 +52,7 @@ function goal(){
 
         }
 
-        seshStart = false;
+        sessionStart = false;
 
     }
 
@@ -60,7 +64,7 @@ function beginGame(){
 
     setBoundaryCSS("boundary");
 
-    seshStart = true;
+    sessionStart = true;
 
     loser = false;
 
@@ -72,11 +76,11 @@ function beginGame(){
 
 function setBoundaryCSS(cssName){
 
-    var blinky = document.querySelectorAll(".boundary");
+    var bound = document.querySelectorAll(".boundary");
 
-    for (var i = 0; i < blinky.length-1; i++) {
+    for (var i = 0; i < bound.length-1; i++) {
 
-        blinky[i].className = cssName;
+        bound[i].className = cssName;
 
     }
 
